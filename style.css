@@ -1,53 +1,167 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: system-ui, sans-serif;
-  background: #f5f7fa;
-  color: #1a1a1a;
+  padding: 0;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #1f2933;
+  line-height: 1.6;
+  background-color: #f8fafc;
+}
+
+/* HERO */
 .hero {
-  background: linear-gradient(
-    rgba(10,25,47,0.8),
-    rgba(10,25,47,0.8)
-  ), url('../images/mountains.jpg');
-  background-size: cover;
+  position: relative;
+  height: 90vh;
+  background: url('images/hero.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 30, 60, 0.65);
+}
+
+.hero-content {
+  position: relative;
   color: white;
-  padding: 5rem 2rem;
+  text-align: center;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+/* BUTTONS */
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #3b82f6;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #2563eb;
+}
+
+.btn-secondary {
+  background: white;
+  color: #1e3a8a;
+}
+
+.btn-secondary:hover {
+  background: #e5e7eb;
+}
+
+/* SERVICES */
+.services {
+  padding: 80px 10%;
+  background: white;
   text-align: center;
 }
 
-.cta {
-  display: inline-block;
-  margin-top: 1.5rem;
-  background: #3fa9f5;
-  color: white;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
+.services h2 {
+  font-size: 2.2rem;
+  margin-bottom: 50px;
 }
 
-.features {
+.service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  padding: 3rem;
-  gap: 2rem;
-  background: white;
+  gap: 30px;
 }
 
-.service-area {
-  padding: 3rem;
-  background: #0a192f;
+.card {
+  background: #f1f5f9;
+  padding: 35px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+}
+
+.price {
+  display: block;
+  margin-top: 20px;
+  font-weight: 700;
+  color: #1e40af;
+}
+
+/* WHY */
+.why {
+  background: #0f172a;
   color: white;
-}
-
-.service-area a {
-  color: #9ddcff;
-}
-
-footer {
+  padding: 70px 10%;
   text-align: center;
-  padding: 1.5rem;
-  background: #020c1b;
-  color: #aaa;
+}
+
+.why h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.why ul {
+  list-style: none;
+  max-width: 600px;
+  margin: auto;
+}
+
+.why li {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+/* CTA */
+.cta {
+  padding: 70px 10%;
+  text-align: center;
+  background: #e0f2fe;
+}
+
+.cta h2 {
+  margin-bottom: 15px;
+}
+
+/* FOOTER */
+footer {
+  background: #020617;
+  color: #cbd5f5;
+  text-align: center;
+  padding: 25px;
+  font-size: 0.9rem;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
 }
